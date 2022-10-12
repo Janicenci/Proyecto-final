@@ -1,0 +1,36 @@
+/*@import "footer";*/
+ 
+
+$tex:(
+    tipografia: 'Amatic SC', cursive
+    color: rgb(218, 155, 20)
+);
+
+@each $nombre,$valor in $tex {
+    .envios-#{$nombre} {
+        font-family: $valor;
+    }
+}
+
+.envios {
+    font-family: map-get($tex, tipografia);
+}
+.envios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+    height: 500px;
+    padding: 0px 40px;
+    margin: 100px 100px;
+}
+.envios-correo{
+@extend .envios;
+}
+.envios-take {
+@extend .envios;
+}
+.envios-mensajeria {
+@extend .envios;
+}
